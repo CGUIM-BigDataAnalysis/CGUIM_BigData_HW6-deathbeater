@@ -1,0 +1,3 @@
+"0","library(ggplot2)"
+"0","count <- table(merge1$統計量)"
+"0","barplot(count, xlab = ""區域別"", ylab = ""統計量"", main =""殯葬業在各區的數量"",density = 5)"

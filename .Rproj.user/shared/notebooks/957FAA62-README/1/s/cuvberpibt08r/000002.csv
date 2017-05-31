@@ -1,0 +1,37 @@
+"0","library(readr)"
+"0","company<- read_csv(""~/Desktop/新北市殯葬禮儀公司_0002700676345301609834.csv"")"
+"2","Parsed with column specification:
+cols(
+  district = col_character(),
+  title = col_character(),
+  person_in_charge = col_character(),
+  address = col_character(),
+  memo_date = col_character(),
+  memo_no = col_character(),
+  tel = col_character(),
+  remark = col_character(),
+  description = col_character()
+)
+"
+"0","Populationdensity <- read_csv(""~/Desktop/新北市人口密度.xls"", "
+"0","    skip = 1)"
+"2","Parsed with column specification:
+cols(
+  統計年 = col_integer(),
+  區域別 = col_character(),
+  年底人口數 = col_character(),
+  土地面積 = col_double(),
+  人口密度 = col_character()
+)
+"
+"0","data<- read_csv(""~/Desktop/opendata10503M030.csv.xls"", "
+"0","    skip = 1)"
+"2","Parsed with column specification:
+cols(
+  .default = col_integer(),
+  區域別 = col_character(),
+  村里 = col_character()
+)
+"
+"2","See spec(...) for full column specifications.
+"

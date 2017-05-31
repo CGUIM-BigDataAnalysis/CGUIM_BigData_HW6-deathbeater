@@ -1,0 +1,20 @@
+{
+    "collab_server" : "",
+    "contents" : "---\ntitle: \"期末專題的分析問題\"\noutput: github_document\n---\n\n\n## 分析議題背景\n台灣新北市人口漸漸面臨老化的情形和殯葬業的崛起，但不見得每個地方都有足量的殯葬業數量來提供服務，會造成供不應求的情況，所以說人口密高、年齡層較高的地方相對來說會比較有需求？\n\n## 分析動機\n在新北市不是每個地區都有殯葬業者，每個區域的人口數差異許多，人口密度高的地區不一定有足夠的殯葬業者能夠負荷，人口密度低的地方或許有很多家，所以藉由這樣的分析來找出到底哪些地方需要增加或哪些地方有多餘殯葬業者。\n\n## 使用資料\n政府資料開放平臺：新北市各鄉鎮市區人口密度、新北市殯葬禮儀公司。\n內政資料開放平臺：村里戶數、單一年齡人口。\n\n載入使用資料們\n```{r}\nlibrary(readr)\ncompany<- read_csv(\"~/Desktop/新北市殯葬禮儀公司_0002700676345301609834.csv\")\nPopulationdensity <- read_csv(\"~/Desktop/新北市人口密度.xls\", \n    skip = 1)\ndata<- read_csv(\"~/Desktop/opendata10503M030.csv.xls\", \n    skip = 1)\n\n```\n\n## 資料處理與清洗\n整理表單欄位名稱，將xml\n\n處理資料\n```{r}\nlibrary(dplyr)\nlibrary(magrittr)\ncolnames(company)<-c(\"區域別\",\"公司名稱\",\"負責人\",\"地址\",\"發文日期\",\"發文字號\",\"聯絡電話\")\ntable(company$區域別)\na <- as.data.frame(table(company$區域別))\nnewtaipeicity <- Populationdensity[grepl(\"新北市\",Populationdensity$區域別),]\nnewtaipeicity$區域 <- substr(newtaipeicity$區域別, start=4,stop=6)\ncolnames(a)<-c(\"區域\",\"統計量\")\nmerge1 <- full_join(newtaipeicity,a,by=\"區域\")\n\n\n\n```\n\n## 探索式資料分析\n圖文並茂圖文並茂\n```{r}\nlibrary(ggplot2)\ncount <- table(merge1$統計量)\nbarplot(count, xlab = \"區域別\", ylab = \"統計量\", main =\"殯葬業在各區的數量\",density = 5)\n```\n\n## 期末專題分析規劃\n假設人口密度高的地方殯葬業者也會多，然後各區域的土地面積大小會影像殯葬業者的數量。\n",
+    "created" : 1495005186135.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "4152409492",
+    "id" : "3AA71426",
+    "lastKnownWriteTime" : 1496241178,
+    "last_content_update" : 1496241178068,
+    "path" : "~/Desktop/CGUIM_BigData_HW6-deathbeater/README.Rmd",
+    "project_path" : "README.Rmd",
+    "properties" : {
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_markdown"
+}
