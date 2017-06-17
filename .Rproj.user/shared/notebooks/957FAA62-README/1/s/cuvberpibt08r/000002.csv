@@ -35,3 +35,37 @@ cols(
 "
 "2","See spec(...) for full column specifications.
 "
+"0","data1 <- read_csv(""~/Downloads/新北市各區戶籍登記人數統計表_0005410544578435862195.csv"")"
+"2","Parsed with column specification:
+cols(
+  District = col_character(),
+  `Moving-in` = col_integer(),
+  `Moving-out` = col_integer(),
+  Birth = col_integer(),
+  Death = col_integer(),
+  `Marriage Registration` = col_integer(),
+  `Divorce Registration` = col_integer()
+)
+"
+"0","X123 <- read_csv(""~/Desktop/123.csv"")"
+"2","Parsed with column specification:
+cols(
+  年份 = col_integer(),
+  平均國民所得 = col_integer()
+)
+"
+"0","X234 <- read_csv(""~/Desktop/234.csv"")"
+"2","Parsed with column specification:
+cols(
+  區域別 = col_character(),
+  家戶平均所得 = col_integer()
+)
+"
+"0","monthdead <- read_csv(""~/Desktop/各月死亡人數.csv"")"
+"2","Parsed with column specification:
+cols(
+  年份 = col_integer(),
+  月 = col_integer(),
+  死亡人數 = col_integer()
+)
+"

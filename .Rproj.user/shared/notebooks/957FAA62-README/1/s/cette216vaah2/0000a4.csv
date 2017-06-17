@@ -1,0 +1,5 @@
+"0","library(ggplot2)"
+"0","count <- table(merge4$統計量)"
+"0","##barplot(count,xlab = ""區域別"",data = merge4, main =""殯葬業在各區的數量"",family = ""HanziPen TC Regular"") "
+"0","merge4$區域 <- as.factor(merge4$區域)"
+"0","ggplot()+geom_bar(data=merge4,aes(x=區域,y=統計量),stat = ""identity"") + theme(text=element_text(family = ""HanziPen TC Regular""))"

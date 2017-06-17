@@ -1,0 +1,1 @@
+{"frames":[{"character_number":0,"end_character_number":0,"end_line_number":0,"file":"","func":"`colnames<-`(`*tmp*`, value = c(\"區域\", \"遷入\", \"遷出\", \n\"出生\", \"死亡\", \"結婚對\", \"離婚對數\"))","line_number":0}],"message":"Error in `colnames<-`(`*tmp*`, value = c(\"區域\", \"遷入\", \"遷出\",  : \n  'names' 屬性 [7] 必須和向量的長度 [2] 一樣\n"}

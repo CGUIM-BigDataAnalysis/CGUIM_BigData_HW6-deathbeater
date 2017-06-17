@@ -1,0 +1,6 @@
+"0","library(ggplot2)"
+"0","ggplot(ovnew,"
+"0","       aes(x=死亡率,"
+"0","           y=統計量))+"
+"0","  geom_point()+"
+"0","  geom_smooth(method = ""glm"")+ theme(text=element_text(family = ""HanziPen TC Regular""))"

@@ -1,0 +1,2 @@
+"0","library(ggplot2)"
+"0","ggplot()+geom_bar(data=X123,aes(x=年份,y=平均國民所得),stat = ""identity"") + theme(text=element_text(family = ""HanziPen TC Regular""))"

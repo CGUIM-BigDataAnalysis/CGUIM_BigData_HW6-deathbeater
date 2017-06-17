@@ -1,0 +1,2 @@
+"0","merge4<- head(merge3[order(merge3$統計量,decreasing = T),],30)"
+"0","    "
